@@ -1,42 +1,44 @@
-var zigzagLevelOrder = function(root) {
-    
+// https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+
+var zigzagLevelOrder = function (root) {
+
     let temp = [];
     let queue1 = [root];
     let result = [];
     let queue2 = [];
     let currentQueue = [];
-    
-    while(queue1.length!==0 || queue2.length !== 0){
-        
-//         you set currentQueue only when one of the queue's length is 0
-        if(currentQueue.length === 0){
-        if(queue1.length === 0){
-            let x = [];
-            for(let i=queue2.length-1;i>=0;i--){
-                x.push(queue2[i].val);
+
+    while (queue1.length !== 0 || queue2.length !== 0) {
+
+        //         you set currentQueue only when one of the queue's length is 0
+        if (currentQueue.length === 0) {
+            if (queue1.length === 0) {
+                let x = [];
+                for (let i = queue2.length - 1; i >= 0; i--) {
+                    x.push(queue2[i].val);
+                }
+                result.push(x);
+                currentQueue = queue2;
+                temp = queue1;
             }
-            result.push(x);
-            currentQueue = queue2;
-            temp = queue1;
-        }
-        if(queue2.length === 0){
-            let x = [];
-            for(let i=0;i<queue1.length;i++){
-                x.push(queue1[i].val);
+            if (queue2.length === 0) {
+                let x = [];
+                for (let i = 0; i < queue1.length; i++) {
+                    x.push(queue1[i].val);
+                }
+                result.push(x);
+                currentQueue = queue1;
+                temp = queue2;
             }
-            result.push(x);
-            currentQueue = queue1;
-            temp = queue2;
-        }
         }
         let currentElement = currentQueue.shift();
-        if(currentElement.left !== null){
+        if (currentElement.left !== null) {
             temp.push(currentElement.left);
         }
-        if(currentElement.right!== null){
+        if (currentElement.right !== null) {
             temp.push(currentElement.right);
         }
-        
+
     }
     return result;
 };

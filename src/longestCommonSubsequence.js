@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/longest-common-subsequence/
 var longestCommonSubsequence = function (text1, text2) {
     //text1 rows
     let mappingArray = new Array(text1.length);

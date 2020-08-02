@@ -1,12 +1,10 @@
+// Pramp question
 function flattenDictionary(dict) {
     // your code goes here
 
     let keys = Object.keys(dict);
 
     for (let i = 0; i < keys.length; i++) {
-        console.log(keys[i]);
-        console.log(dict[keys[i]]);
-        console.log("x");
         let currentKey = keys[i];
         console.log(dict[keys[i]].constructor == Object);
         if (dict[keys[i]].constructor == Object) {
@@ -22,10 +20,7 @@ function flattenDictionary(dict) {
 let output_dictionary = {}
 
 function flattenKey(dict, parentkey) {
-    console.log("parentkey");
-    console.log(parentkey);
     let keys = Object.keys(dict);
-
     for (let i = 0; i < keys.length; i++) {
         let currentKey = keys[i]; //d
         if (dict[keys[i]].constructor == Object) {
