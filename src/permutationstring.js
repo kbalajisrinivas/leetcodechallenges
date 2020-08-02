@@ -1,4 +1,4 @@
-let str = "balajisrinivas";
+let str = "test";
 
 let stringResult = [str.split('')[0]];
 

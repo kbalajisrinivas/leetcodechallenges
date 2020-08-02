@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
 function ListNode(val, next) {
     this.val = (val === undefined ? 0 : val)
     this.next = (next === undefined ? null : next)

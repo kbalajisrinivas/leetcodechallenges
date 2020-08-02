@@ -1,4 +1,4 @@
-let input_str = "abcdefghijklmn";
+let input_str = "abcd";
 String.prototype.splice = function(idx, rem, str) {
     return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
 };

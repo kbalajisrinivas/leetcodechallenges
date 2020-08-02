@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/verifying-an-alien-dictionary/
+
 let words = ["wfhi", "wf"];
 let order = "worldabcefghijkmnpqstuvxyz";
 

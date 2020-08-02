@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/first-bad-version/
+
 var solution = function(isBadVersion) {
     /**
      * @param {integer} n Total versions

@@ -1,3 +1,7 @@
+// https://leetcode.com/problems/add-binary/
+
+// This code is not so great. 
+//Todo: Need to write an optimal code
 let a = "1010";
 let b = "1011";
 

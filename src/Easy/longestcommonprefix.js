@@ -1,3 +1,9 @@
+
+/*
+https://leetcode.com/problems/longest-common-prefix/
+There are so many ways to solve the problem. 
+https://medium.com/@d_dchris/10-methods-to-solve-the-longest-common-prefix-problem-using-python-leetcode-14-a87bb3eb0f3a
+*/
 let input_array = ["flower","flowe","flower"];
 
 let counter = 0;

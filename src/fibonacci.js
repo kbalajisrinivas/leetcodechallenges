@@ -12,20 +12,6 @@ for (let i = 2; i < 8; i++) {
 
 // console.log(fibonacci_array[7]);
 
-let stack = [];
-stack.push(8);
-stack.push(10);
-console.log(stack);
-// let t= stack.pop();
-// console.log(t);
-// console.log(stack)
-let t = stack.shift();
-console.log(t);
-console.log(stack);
-
-
-
-
 function fibonacci(n) {
     counter = counter + 1;
     console.log(counter);

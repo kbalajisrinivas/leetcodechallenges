@@ -3,8 +3,8 @@ let number = 5789
 let number_str = number.toString();
 let final_str = "";
 
-for(let i=0;i<100;i++){
-    final_str=final_str + number_str;
+for (let i = 0; i < 100; i++) {
+    final_str = final_str + number_str;
 }
 let result = findSuperDigit(final_str)
 

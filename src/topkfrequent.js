@@ -1,3 +1,13 @@
+// https://leetcode.com/problems/top-k-frequent-elements/
+
+/*
+NOTE: This solution uses heaps to solve the problem. 
+But there is another better solution without using heaps. 
+We can store the frequencies in an array
+(frequency as index and list of elements as a value in array)
+then iterate from the end. 
+*/
+
 var topKFrequent = function(nums, k) {
     let frequencyDictionary = {};
     for(let i=0;i<nums.length;i++){

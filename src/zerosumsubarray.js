@@ -1,3 +1,9 @@
+// https://leetcode.com/problems/subarray-sum-equals-k/
+
+// NON OPTIMAL SOLUTION. The solution uses 2 for loops.
+// An optimal solution will involve storing the sum in dictionary.
+
+
 let input_array = [10, 2, -5, 1, 2, -1];
 
 /*
