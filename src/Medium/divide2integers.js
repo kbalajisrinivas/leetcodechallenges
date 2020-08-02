@@ -1,4 +1,9 @@
+// https://leetcode.com/problems/divide-two-integers/
 
+/* 
+WRONG ANSWER
+PLEASE REFER LEETCODE FOR CORRECT ANSWER
+*/
 
 let number = 0;
 let divisor = 1;

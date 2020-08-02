@@ -1,3 +1,9 @@
+// https://leetcode.com/problems/search-a-2d-matrix/
+
+/* This is not the EXACT solution.
+Few test cases failed with this approach. 
+Probably take a look at this again sometime*/
+
 var searchMatrix = function(matrix, target) {
     if(matrix.length === 0){
         return false;
