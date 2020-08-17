@@ -1,3 +1,16 @@
+// https://leetcode.com/problems/rotate-image/
+/*There is another solution for doing this
+
+We need to swap right elements to left and left elements to right
+ 
+1 2     changes to    2  1     
+3 4                   4  3
+
+Then change i and j positions [i][j] [j][i]. 
+
+2 1    changes to 3  1
+4 3               4  2
+*/
 /*
 
 input matrix:  1 2 
