@@ -1,4 +1,9 @@
 
+// https://leetcode.com/problems/linked-list-cycle/
+
+//There are 2 solutions to this. one is to use a visited flag
+//and another one is to use a slow pointer and a fast pointer. 
+// slow and fast pointer is little tricky. 
 
 function ListNode(val, next) {
     this.val = (val === undefined ? 0 : val)
