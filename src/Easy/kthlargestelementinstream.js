@@ -1,5 +1,5 @@
 
-// https://leetcode.com/problems/kth-largest-element-in-an-array/
+// https://leetcode.com/problems/kth-largest-element-in-a-stream/
 
 var KthLargest = function (k, nums) {
     this.nums = nums;

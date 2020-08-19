@@ -1,3 +1,9 @@
+// https://leetcode.com/problems/reverse-words-in-a-string/
+/*
+
+Below solution is not great. There are easier and cleaner solutions available
+(like splitting by "" and then reverse it)
+*/
 let input = "a good   example  ";
 let output = "";
 
