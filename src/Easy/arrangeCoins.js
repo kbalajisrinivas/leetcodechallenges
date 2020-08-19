@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/arranging-coins/
+
 var arrangeCoins = function(n) {
     let result = 0;
     let counter = 0;

@@ -1,3 +1,7 @@
+// https://leetcode.com/problems/median-of-two-sorted-arrays/
+
+/* The current solution uses O(n+m) time complexity */
+/* There is a better solution with O(log(m+n)). It is little complicated */
 var findMedianSortedArrays = function (nums1, nums2) {
     let numberOfElements = nums1.length + nums2.length;
     let isOdd = numberOfElements % 2 == 1;
