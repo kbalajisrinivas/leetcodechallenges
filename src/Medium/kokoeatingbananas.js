@@ -6,18 +6,22 @@ var minEatingSpeed = function (piles, H) {
     let min = 1;
     let max = piles[piles.length - 1];
     let temp = 0;
-    while (min < max) {
+    while (min <= max) {
         let mid = min + Math.floor((max - min) / 2);
         let hours = computeHours(piles, mid);
-        if (hours <= H) {
+        if(hours === H){
+            return mid;
+        }
+        if (hours < H) {
             //we should eat less bananas
             temp = mid;
-            max = mid;
+            max = mid - 1;
         } else {
             //we should eat more bananas
             temp = mid;
             min = mid + 1;
         }
+
     }
     return min;
 };
@@ -35,7 +39,7 @@ function computeHours(piles, count) {
     return hours;
 }
 
-let result = minEatingSpeed([30], 29);
+let result = minEatingSpeed([312884470],312884469);
 console.log(result);
 
 

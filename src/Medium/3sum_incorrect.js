@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/3sum/
 /* NOT SURE ABOUT THE SOLUTION. IT MIGHT NOT BE CORRECT*/
+/* The correct solution is in file 3sum.js*/
 function threesum(nums) {
     
     let sum_array = {};
