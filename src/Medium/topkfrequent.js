@@ -6,6 +6,11 @@ But there is another better solution without using heaps.
 We can store the frequencies in an array
 (frequency as index and list of elements as a value in array)
 then iterate from the end. 
+
+Update November 26th, 2020: If we store frequency as Index, then we might need
+to use a lot of space.
+If there are 100,000 elements with 50,000 1's then, we need the array index
+to be 50,000.
 */
 
 var topKFrequent = function(nums, k) {
