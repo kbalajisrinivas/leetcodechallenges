@@ -1,0 +1,94 @@
+/*
+https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/sales_rank#design-amazons-sales-rank-by-category-feature
+
+3:02 PM
+
+*/
+
+This editor is synced in real time with your peer.
+
+Use it to share thoughts and resources, such as:
+- Features scope
+- API design
+- Pseudo code for specific components
+- Data model/schema
+- Back-of-the-envelope calculations
+- Reference links
+- Link to whiteboard or diagram such as https://sketchboard.me/new
+
+Good luck!
+
+
+/*
+Most popular products: 100 per category. 
+number of categories: 1000 categories. 
+10 million products
+
+past week -- 7 days worth of data for this. 
+number of purchases/ day --> 1 billion/month => 250 million purchases/week.
+
+each time the user makes a purchase --> we need to store it somewhere. 250 million purchases/week. 
+                                       (250 million requests in a week)
+                                       
+
+
+Store the rank precomputed in a cache or a table so that the users can access that quickly.
+Otherwise computation cost will be high. 
+
+DB design:
+
+Tables:
+1) Purchase -- each purchase goes to this table
+   Id(Primary Key), ProductId, Count, UserId, PurchaseDate
+   Add an index on PurchaseDate
+
+2) Category -- mostly going to be a static table
+   Id, CategoryName
+
+3) Product -- all the products are going to be here.
+   Id (Primary Key), CategoryId, Count, Cost
+
+
+
+if i login at 9 am or 9 PM, it's going to be the same data I will be seeing. 
+once a day is not a good solution because it's lot of delay
+
+There should be a background process which calculates the most popular products every 30 minutes. 
+
+Read to Write ratio: 100:1 
+
+
+User (Mobile App/WebApp)  ->  PopularProduct Service                    --> PopularProduct Cache(rediscahe/memcache)
+                                 (GET API)
+                                 pass a category name as a parameter
+
+
+The cache should have a maximum of 1000 keys, each key with 100 items. 
+Cache's size is pretty small. 
+
+How does the cache look:
+
+{
+
+  "Category": ["Product1","Product2"....]
+
+}
+
+
+Purchasing an item:
+User (WebApp)  -> Purchase Service -->                                ---> Update Purchase table (count)
+                  (Each time user places an order, we call purchase service)
+                  We also need to update the count for each of the product in
+                  product service. So we call the PUT Api (ProductId, Count, Action)
+                  
+                  
+                  Product Service 
+                  GET
+                  PUT Api
+                  
+                  Transaction is completed.
+                  
+Updating the cache:
+background job which runs every 30 minutes. 
+I don't need to get the data for all 7 days every time.
+I should be just getting the data for the last 30 minutes.

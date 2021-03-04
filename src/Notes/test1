@@ -1,0 +1,31 @@
+https://leetcode.com/problems/network-delay-time/ -- dijkstra
+redundant connection -- do using dsu (the current approach we have does a DFS each time we traverse)
+graph valid tree -- another dsu
+
+Heaps:
+
+Median of stream of integers
+https://leetcode.com/problems/task-scheduler/  -- heaps
+meeting rooms ii
+kth smallest
+
+todo:
+  Tries. Stream of characters search
+  behavioral questions revision 
+  (nothing else?)
+  start your mysql and node service and hello world in angular
+
+
+
+1 or 2 problems -- cyclic sort
+Tries
+
+1 pramp
+do not get distracted with other problems. focus is more important
+
+revise behavioral once 
+thumbtack engineering blog
+
+Linked list,
+binary search
+arrays

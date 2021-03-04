@@ -1,0 +1,60 @@
+I have coded these patterns already
+
+1) Traversing the matrix
+2) In a tree print the level orders, zigzag order, rearview etc. 
+3) Kadane's algorithm for finding the maximum contigous subarray sum 
+    the algorithm goes like this. 
+     you keep adding the numbers. 
+     when it becomes less than 0, you reset to zero. and then keep adding it. 
+     if it's positive it's going to be all the numbers. 
+     if it's negative, it's going to be the minimum number. do it once more 
+4) next palindrome 
+   -- what's the trick here. 
+      need to come to the first descending point and then you iterate from that position 
+      to the position where it finds the number less than the current. 
+      important point is to swap the number just before the (less than current number) 
+      because it is guaranteed to be more than the current number 
+      then reverse the elements. (practice once more)
+5) Sorting algorithms 
+   a) merge sort -- recursion, the merge function accepts the positions it needs to merge. 
+      merge(array, startpos, midpoint, endpos) 
+      create new array and then put the elements in the left and rightarray 
+      now compare the elements in the arrays and then put the element in the actual array. 
+   
+   b) quick sort -- recursion 2 pointers. we need to choose the pivot element. 
+      last element is the pivot element. at each iteration all the elements less than pivot comes to the left
+      and all the elements greater than pivot moves to the right. 
+
+      start with 2 pointers i and j. one for tracking the element 
+      greater than pivot
+      and another for tracking elements less than pivot. 
+      basically one pointer just to point at the starting of greater elements
+      so that we can swap the lesser elements.
+  
+
+
+      8 2 3 10 4 7 2 4 18 4 6
+
+      6 is pivot 
+      first iter 2  8 
+
+   c) heapsort 
+       -- still need to get used to it. 
+
+6) Rotating the matrix. do a transpose and then swap (easy solution)
+
+
+Heaps  -- 3
+linked lists -- 3
+Graph traversal -- 3
+binary search 
+is bt a bst? 
+lowest common ancestor of a bst. 
+
+System design -- do 4 or 5 design interviews in pramp. 
+behavioral -- prepare for a day, do 2 or 3 pramp 
+
+
+
+
+

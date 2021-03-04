@@ -30,6 +30,18 @@ Trie.prototype.insert = function (word) {
     currentNode.isCompleteWord = true
 };
 
+
+    let trie = this.trie;
+    for(let k=0;k<currentWord.length;k++){
+        let childNode = trie.children[currentWord[k]];
+        if(childNode === undefined){
+            trie.children[currentWord[k]] = new TrieNode();
+        }
+        trie = trie.children[currentWord[k]];
+    }
+    trie.isCompleteWord = true;
+
+
 /**
  * Returns if the word is in the trie. 
  * @param {string} word

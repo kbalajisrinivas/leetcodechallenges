@@ -1,0 +1,58 @@
+
+// console.log('Practice makes Perfect!'); 
+// start time: 6:30 PM
+You are supposed to design an API and a backend for a system that can allot phone numbers to people living in a city. The phone numbers will start from 111-111-1111 and end at 999-999-9999. The API should enable the clients (people in the city) to do the following:
+
+1. When a client requests for a phone number, it allots one of the available numbers to them.
+2. Some clients may want fancy numbers, so they can specifically ask for a number to be alloted to them. If the requested number is available then the system allots it to them, otherwise the system allots any available number.
+
+The system need not have to know which number is alloted to which client. The same client may make successive requests and get multiple phone numbers for himself, but the system is not bothered. At any point of time, the system only knows which phone numbers are alloted and which phone numbers are free.
+
+
+/* requirements
+store the numbers somewhere. sql primay key as a number. 
+
+id:
+phone number:
+
+
+API (Phone number API)
+
+POST -- API if we are going to create
+but user wants to GET one number, so it's a get. 
+GET API without parameter -- return a random number
+GET API with parameter -- return that particular number if available, otherwise return a random number. 
+
+SQL -- we can define a sequence, get the next number in the sequence. 
+
+111 - 111-1111 + 0 ==> 111-111-1111
+
+
+[1111111114]
+
+database -- nextsequence 
+
+GET RandomPhoneNumber: 
+    Gets the next number from sequence
+    check the next available number. if nextavailablenumber is not the next number, then update the sequence to whatever number is available next
+    
+      
+
+GET FancyPhoneNumber?id=111,111,1113
+   Check whether number is not available in the ordered list
+   put that number in the ordered list. 
+   check the next available number. if nextavailablenumber is not the next number, then update the sequence to whatever number is available next
+
+111,111,111
+
+first random request -- 111,111,1111
+second request -- 111,111,1112
+
+1. Having a separate table. 
+2. Store the numbers in the list.
+
+not able to heap
+
+
+111,111,1114
+456-789-0123
